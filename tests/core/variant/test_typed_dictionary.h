@@ -44,6 +44,8 @@ TEST_CASE("[TypedDictionary] Object value init") {
 	};
 	CHECK_EQ(tdict[0.0], Variant(a));
 	CHECK_EQ(tdict[5.0], Variant(b));
+	memdelete(a);
+	memdelete(b);
 }
 
 TEST_CASE("[TypedDictionary] RefCounted value init") {
